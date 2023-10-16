@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logan's Workspace</title>
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta property="og:title" content="Logans Workspace" />
+    <meta
+      property="og:description"
+      content="Making projects for Roblox, Minecraft, and possibly more soon!"
+    />
+    <meta property="og:image" content="./images/lw_logo.jpg" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+    <script type="module" src="scripts/vue/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Logan's Workspace</h1>
+    </header>
+    <div id="app">
+      <main>
+        <tab-system>
+          <tab-system-tab title="Projects" class="projects-container">
+            <article
+              class="project"
+              style="background-image: url('./images/kronos_void.png')"
+            >
+              <h3>KronosVoid</h3>
+              <a
+                href="https://www.roblox.com/games/11435662668/KronosVoid"
+                class="button-link"
+                >View</a
+              >
+            </article>
+            <article
+              class="project"
+              style="background-image: url('./images/rumble.png')"
+            >
+              <h3>Rumble</h3>
+              <a
+                href="https://www.roblox.com/games/9725919081/Rumble"
+                class="button-link"
+                >View</a
+              >
+            </article>
+            <article><p>More to come soon.</p></article></tab-system-tab
+          >
+          <tab-system-tab title="Store">
+            <tab-system>
+              <tab-system-tab title="KronosVoid" class="store-container">
+                <store-item
+                  name="Radar"
+                  price="75"
+                  img="./images/store/kronosvoid/Radar.png"
+                  href="//www.roblox.com/game-pass/101986677/Radar"
+                ></store-item>
+                <store-item
+                  name="Scopophobia"
+                  price="25"
+                  img="./images/store/kronosvoid/Scopophobia.png"
+                  href="//www.roblox.com/game-pass/103100308/Scopophobia"
+                ></store-item>
+              </tab-system-tab>
+              <tab-system-tab title="Rumble"> rumbble </tab-system-tab>
+            </tab-system>
+          </tab-system-tab>
+          <tab-system-tab title="News" class="projects-container">
+            <article
+              class="project"
+              style="background-image: url('./images/atlastease.png')"
+            >
+              <h3>The Atlas Skin</h3>
+              <a
+                href="/news.html?name=atlas"
+                class="button-link"
+                >View</a
+              >
+            </article>
+            <article
+              class="project"
+              style="background-image: url('./images/breakouttease1.png')"
+            >
+              <h3>BREAKOUT: Update #1</h3>
+              <a
+                href="/news.html?name=breakout"
+                class="button-link"
+                >View</a
+              >
+            </article>
+        </tab-system>
+      </main>
+      <site-footer></site-footer>
+    </div>
+  </body>
+</html>

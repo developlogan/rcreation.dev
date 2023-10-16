@@ -1,0 +1,74 @@
+@import "./base/_colours";
+@import "./base/_typography";
+@import "./components/_footer";
+@import "./components/_header";
+@import "./components/news_post";
+@import "./components/_projects";
+@import "./components/_store";
+@import "./components/_tabs";
+@import "./mixins/_button";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #232527;
+  background-attachment: fixed;
+
+  color: $unwhite;
+
+  font-family: "Gotham", "Helvetica Neue", "Helvetica", "Lucida Grande", "Calibri", sans-serif;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1;
+  }
+
+  main {
+    margin: 5vh 10vw 5vh 10vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  button,
+  .button-link {
+    @include button-base();
+
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: $lgreen;
+  }
+
+  span.robux {
+    display: inline-block;
+    vertical-align: middle;
+
+    background-image: url("/icons/robux.svg");
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+
+    min-width: 1em;
+    width: 1em;
+    height: 1.2em;
+
+    margin-right: 0.2em;
+  }
+}

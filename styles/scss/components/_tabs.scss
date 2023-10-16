@@ -1,0 +1,42 @@
+@import "../base/_colours.scss";
+
+.tab-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .tab-btn {
+    background-color: $footergray;
+    border-radius: 0;
+    border: none;
+    border-bottom: 5px solid $footergray;
+
+    color: $unwhite;
+    padding: 10px 0;
+    margin: 10px 0;
+    outline: none;
+    width: 15%;
+
+    flex: 1;
+
+    &:hover {
+      border-bottom-color: $dgray;
+    }
+
+    &.active {
+      border-bottom-color: $unwhite;
+    }
+  }
+}
+
+.tab-content-container {
+  width: 100%;
+
+  .tab-content {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+}
