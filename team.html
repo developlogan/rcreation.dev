@@ -20,15 +20,15 @@
   <body>
     <header>
       <a href="./" id="home-link" class="button-link"></a>
-      <h1 id="title">Post Title</h1>
+      <h1 id="title">Member Name</h1>
     </header>
     <main>
-      <section id="team-post-content">post content</section>
+      <section id="news-post-content">Member Bio</section>
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
       <script>
         const params = new URLSearchParams(window.location.search)
 
-        fetch(`/posts/${params.get("name")}.md`)
+        fetch(`/team/${params.get("name")}.md`)
           .then((response) => {
             if (!response.ok) {
               console.log(response)
@@ -40,7 +40,7 @@
             const split = data.split("---")
             const metadata = JSON.parse(split[0])
             const content = split[1]
-            document.getElementById("team-post-content").innerHTML =
+            document.getElementById("news-post-content").innerHTML =
               marked.parse(content)
 
             if(metadata.title) {
